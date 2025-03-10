@@ -1,14 +1,21 @@
-import { useState } from "react"
+import { useEffect ,useState } from "react"
 
 function App(){
 
-  const [count , setCount ] = useState(1);
+  const [count , setCount ] = useState(0);
 
   function increaseCount (){
     setCount(count+1)
   }
 
-  setInterval(increaseCount,1000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   return <div>
     <div style={{ display: "flex", alignItems: "center" }}>
