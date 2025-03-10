@@ -8,6 +8,8 @@ function App(){
     setCount(count+1)
   }
 
+  setInterval(increaseCount,1000);
+
   return <div>
     <div style={{ display: "flex", alignItems: "center" }}>
   <div
@@ -31,9 +33,6 @@ function App(){
       <img style={{cursor:"pointer"}}
       src="https://cdn-icons-png.flaticon.com/512/472/472371.png"
        width={20}/>
-
-       <button onClick={increaseCount}>Increase Count</button>
-
 </div>
 }
 
