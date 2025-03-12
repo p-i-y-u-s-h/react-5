@@ -4,9 +4,9 @@ function App(){
 
   const [count , setCount ] = useState(0);
 
-  function increaseCount (){
-    setCount(count+1)
-  }
+  // function increaseCount (){
+  //   setCount(count+1)
+  // }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,7 +15,6 @@ function App(){
 
     return () => clearInterval(interval);
   }, []);
-
 
   return <div>
     <div style={{ display: "flex", alignItems: "center" }}>
@@ -36,7 +35,6 @@ function App(){
     {count}
   </div>
 </div>
-
       <img style={{cursor:"pointer"}}
       src="https://cdn-icons-png.flaticon.com/512/472/472371.png"
        width={20}/>
